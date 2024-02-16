@@ -9,21 +9,15 @@ public class Evento {
     private double gasto;
     private String puntoPartida;
     private String destino;
+
     private Chofer chofer;
 
     public double getPago() {
         return pago;
     }
-    public Evento(Chofer chofer) {
-        this.chofer = chofer;
-    }
 
-    public Chofer getChofer() {
-        return chofer;
-    }
-
-    public void setChofer(Chofer chofer) {
-        this.chofer = chofer;
+    public void setPago(double pago) {
+        this.pago = pago;
     }
 
     public String getPuntoPartida() {
@@ -42,12 +36,17 @@ public class Evento {
         this.destino = destino;
     }
 
-    public void setPago(double pago) {
-        this.pago = pago;
+    public Evento() {
+        this.chofer = chofer;
+        this.fechaHora = LocalDateTime.now();
     }
 
-    public Evento() {
-        this.fechaHora = LocalDateTime.now();
+    public Chofer getChofer() {
+        return chofer;
+    }
+
+    public void setChofer(Chofer chofer) {
+        this.chofer = chofer;
     }
 
     public LocalDateTime getFechaHora() {

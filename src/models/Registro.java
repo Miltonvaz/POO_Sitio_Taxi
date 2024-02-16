@@ -5,8 +5,10 @@ import java.util.ArrayList;
 public class Registro {
     private ArrayList<Evento> eventos;
     private double totalIngresos;
+    private Chofer chofer;
 
     public Registro() {
+        this.chofer = chofer;
         this.eventos = new ArrayList<>();
     }
 
@@ -14,7 +16,11 @@ public class Registro {
         return eventos;
     }
 
-    public void addEventoAsignado(Chofer chofer, Evento evento) {
+    public Chofer getChofer() {
+        return chofer;
+    }
+
+    public void addEventoAsignado(Evento evento) {
         eventos.add(evento);
         evento.setChofer(chofer);
         if (evento.getPago() > 0) {
@@ -26,4 +32,3 @@ public class Registro {
         return ingresos - gastos;
     }
 }
-

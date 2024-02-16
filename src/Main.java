@@ -184,7 +184,7 @@ public class Main {
                                             viaje.setFechaHora(fechaHoraActual);
 
                                             listaViajes.add(viaje);
-                                            registro.addEventoAsignado(driver,viaje);
+                                            registro.addEventoAsignado(viaje);
                                         } else if (ser.equalsIgnoreCase("N")) {
                                             break;
                                         }

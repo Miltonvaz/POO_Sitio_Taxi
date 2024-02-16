@@ -8,19 +8,9 @@ public class Chofer {
     private int id;
     private boolean disponible = true;
     private ArrayList<Taxi> taxisAsignados;
-    private ArrayList<Evento> eventosAsignados;
 
     public Chofer() {
         this.taxisAsignados = new ArrayList<>();
-        this.eventosAsignados = new ArrayList<>();
-    }
-
-    public ArrayList<Evento> getEventosAsignados() {
-        return eventosAsignados;
-    }
-
-    public void addEventoAsignado(Evento evento) {
-        eventosAsignados.add(evento);
     }
 
     public int getId() {
@@ -47,19 +37,19 @@ public class Chofer {
         this.apellido = apellido;
     }
 
-    public ArrayList<Taxi> getTaxisAsignados() {
-        return taxisAsignados;
-    }
-
-    public void addTaxiAsignado(Taxi taxi) {
-        taxisAsignados.add(taxi);
-    }
-
     public boolean isDisponible() {
         return disponible;
     }
 
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
+    }
+
+    public ArrayList<Taxi> getTaxisAsignados() {
+        return taxisAsignados;
+    }
+
+    public void addTaxiAsignado(Taxi taxi) {
+        taxisAsignados.add(taxi);
     }
 }
