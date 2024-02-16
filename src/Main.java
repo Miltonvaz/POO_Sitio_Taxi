@@ -150,7 +150,7 @@ public class Main {
                         keyboard.nextLine();
                         choferValido = true;
 
-                        if (driver != null && driver.getId() == choferId) {
+                        if (driver != null) {
                             System.out.println("¡Bienvenido, " + driver.getNombre() + " " + driver.getApellido() + "!");
                             do {
                                 System.out.println("¿Qué desea hacer?");
