@@ -170,19 +170,14 @@ public class Main {
 
                                         if (ser.equalsIgnoreCase("S")) {
                                             System.out.println("Punto de partida: ");
-                                            String puntoPartida = keyboard.nextLine();
+                                            viaje.setPuntoPartida(keyboard.nextLine());
                                             System.out.println("Punto de destino: ");
-                                            String puntoDestino = keyboard.nextLine();
+                                            viaje.setDestino(keyboard.nextLine());
                                             System.out.println("Costo del viaje: ");
-                                            double costoViaje = keyboard.nextDouble();
+                                            viaje.setPago(keyboard.nextInt());
 
-                                            viaje.setPuntoPartida(puntoPartida);
-                                            viaje.setDestino(puntoDestino);
-                                            viaje.setPago(costoViaje);
-
-                                            LocalDateTime fechaHoraActual = LocalDateTime.now();
+                                          LocalDateTime fechaHoraActual = LocalDateTime.now();
                                             viaje.setFechaHora(fechaHoraActual);
-
                                             listaViajes.add(viaje);
                                             registro.addEventoAsignado(viaje);
                                         } else if (ser.equalsIgnoreCase("N")) {
